@@ -13,7 +13,7 @@ let totalCookies = 0
 totalCookies = document.querySelector('#qty-total')
 
 // Code to update name display 
-document.getElementById('cookie-name').textContent = `Created by ${yourName}`
+document.getElementById('credit').textContent = `Created by ${yourName}`
 
 // Event listener for clicks on the "+" button for Ginger Bread cookies
 gBread = document.querySelector('#qty-gb')
