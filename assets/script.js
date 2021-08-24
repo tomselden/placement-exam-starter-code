@@ -27,6 +27,13 @@ document.getElementById('add-gb').addEventListener('click', function(){
 document.getElementById('minus-gb').addEventListener('click', function(){
     gBread.innerHTML = parseInt(gBread.innerHTML)-1
     totalCookies.innerHTML = parseInt(totalCookies.innerHTML)-1
+    if (gBread.innerHTML < 0) {
+        gBread.innerHTML = 0
+    }
+    if (totalCookies.innerHTML < 0) {
+        totalCookies.innerHTML = 0
+        return;
+    }    
 })
 
 cCookie = document.querySelector('#qty-cc')
@@ -34,12 +41,19 @@ cCookie = document.querySelector('#qty-cc')
 document.getElementById('add-cc').addEventListener('click', function(){
     cCookie.innerHTML = parseInt(cCookie.innerHTML)+1
     totalCookies.innerHTML = parseInt(totalCookies.innerHTML)+1
-
+    
 })    
 
 document.getElementById('minus-cc').addEventListener('click', function(){
     cCookie.innerHTML = parseInt(cCookie.innerHTML)-1
     totalCookies.innerHTML = parseInt(totalCookies.innerHTML)-1
+    if (cCookie.innerHTML < 0) {
+        cCookie.innerHTML = 0
+    }
+    if (totalCookies.innerHTML < 0) {
+        totalCookies.innerHTML = 0
+        return;
+    }    
 })    
 
 sCookie = document.querySelector('#qty-sugar')
@@ -51,9 +65,17 @@ document.getElementById('add-sugar').addEventListener('click', function(){
 document.getElementById('minus-sugar').addEventListener('click', function(){
     sCookie.innerHTML = parseInt(sCookie.innerHTML)-1
     totalCookies.innerHTML = parseInt(totalCookies.innerHTML)-1
+    if (sCookie.innerHTML < 0) {
+        sCookie.innerHTML = 0
+    }
+    if (totalCookies.innerHTML < 0) {
+        totalCookies.innerHTML = 0
+        return;
+    }
 })    
 
-   
+
+
 
     // HINT: You can delete this console.log after you no longer need it!
     console.log('Ginger bread + button was clicked!')
