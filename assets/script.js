@@ -25,15 +25,13 @@ document.getElementById('add-gb').addEventListener('click', function(){
 })
 
 document.getElementById('minus-gb').addEventListener('click', function(){
+    if (gBread.innerHTML > 0) {
     gBread.innerHTML = parseInt(gBread.innerHTML)-1
     totalCookies.innerHTML = parseInt(totalCookies.innerHTML)-1
-    if (gBread.innerHTML < 0) {
-        gBread.innerHTML = 0
+    
+       
     }
-    if (totalCookies.innerHTML < 0) {
-        totalCookies.innerHTML = 0
-        return;
-    }    
+     
 })
 
 cCookie = document.querySelector('#qty-cc')
@@ -45,15 +43,13 @@ document.getElementById('add-cc').addEventListener('click', function(){
 })    
 
 document.getElementById('minus-cc').addEventListener('click', function(){
+    if (cCookie.innerHTML > 0) {
     cCookie.innerHTML = parseInt(cCookie.innerHTML)-1
     totalCookies.innerHTML = parseInt(totalCookies.innerHTML)-1
-    if (cCookie.innerHTML < 0) {
-        cCookie.innerHTML = 0
+    
+       
     }
-    if (totalCookies.innerHTML < 0) {
-        totalCookies.innerHTML = 0
-        return;
-    }    
+      
 })    
 
 sCookie = document.querySelector('#qty-sugar')
@@ -61,17 +57,16 @@ sCookie = document.querySelector('#qty-sugar')
 document.getElementById('add-sugar').addEventListener('click', function(){
     sCookie.innerHTML = parseInt(sCookie.innerHTML)+1
     totalCookies.innerHTML = parseInt(totalCookies.innerHTML)+1
+
 })
 document.getElementById('minus-sugar').addEventListener('click', function(){
+    if (sCookie.innerHTML > 0) {
     sCookie.innerHTML = parseInt(sCookie.innerHTML)-1
     totalCookies.innerHTML = parseInt(totalCookies.innerHTML)-1
-    if (sCookie.innerHTML < 0) {
-        sCookie.innerHTML = 0
+    
+        
     }
-    if (totalCookies.innerHTML < 0) {
-        totalCookies.innerHTML = 0
-        return;
-    }
+   
 })    
 
 
